@@ -36,9 +36,6 @@
 
 #include "marshalutils.h"
 
-// Empty namespace for local static functions
-namespace {
-
 // Marshall the RouteStructure data into a D-Bus argument
 QDBusArgument &operator<<(QDBusArgument &argument, const RouteStructure &routestruct)
 {
@@ -69,6 +66,9 @@ const QDBusArgument &operator>>(const QDBusArgument &argument, RouteStructure &r
 
     return argument;
 }
+
+// Empty namespace for local static functions
+namespace {
 
 QVariant convertState (const QString &key, const QVariant &value, bool toDBus)
 {
