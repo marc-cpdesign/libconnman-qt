@@ -28,9 +28,14 @@ Counter::Counter(QObject *parent) :
     shouldBeRunning(false),
     registered(false)
 {
+#if QT_VERSION < QT_VERSION_CHECK(5,10,0)
     QTime time = QTime::currentTime();
     qsrand((uint)time.msec());
     int randomValue = qrand();
+#else
+    int randomValue = QRandomGenerator::global()->generate();
+#endif
+
     //this needs to be unique so we can use more than one at a time with different processes
     counterPath = "/ConnectivityCounter" + QString::number(randomValue);
 
