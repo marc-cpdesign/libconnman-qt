@@ -34,10 +34,10 @@
 #define VPNMODEL_H
 
 #include <QAbstractListModel>
+#include "vpnmanager.h"
+#include "vpnconnection.h"
 
 class VpnModelPrivate;
-class VpnManager;
-class VpnConnection;
 
 /*
  * VpnModel is a basic list model for connman VPN services.

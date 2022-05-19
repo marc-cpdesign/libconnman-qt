@@ -34,10 +34,10 @@
 #define VPNMANAGER_H
 
 #include <QObject>
+#include "vpnconnection.h"
 
 class VpnManagerPrivate;
 class VpnManager;
-class VpnConnection;
 
 // ==========================================================================
 // VpnManagerFactory
