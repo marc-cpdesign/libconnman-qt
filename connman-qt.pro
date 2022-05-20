@@ -16,4 +16,5 @@ example {
    SUBDIRS += examples/counters
 }
 
-OTHER_FILES += rpm/connman-qt5.spec
+equals(QT_MAJOR_VERSION, 5): OTHER_FILES += rpm/connman-qt5.spec
+equals(QT_MAJOR_VERSION, 6): OTHER_FILES += rpm/connman-qt6.spec
