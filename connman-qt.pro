@@ -1,6 +1,9 @@
 TEMPLATE = subdirs
 SUBDIRS += libconnman-qt
 
+# Qt6 requires c++17
+greaterThan(QT_MAJOR_VERSION, 5): CONFIG += c++17
+
 # Adds 'coverage' target
 include(coverage.pri)
 # CONFIG flag to disable qml plugin
